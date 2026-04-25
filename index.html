@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO 自动优化 -->
     <title>欢迎来到袁鹏的作品集</title>
     <meta name="description" content="资深设计师，PS/AI、Kyshoy/剪映、三维渲染与AIGC创意，极简风格高级视觉解决方案。">
+    <meta name="keywords" content="视觉设计,品牌设计,UI设计,三维渲染AIGC,设计师作品集">
+    <link rel="canonical" href="https://yourdomain.com">
+    <!-- 字体与图标 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // Tailwind 配置 - 极简黑白+深蓝主色
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0A2540',
+                        primary: '#0A2540', // 深蓝主色 - 高级专业
                         dark: '#121212',
                         light: '#F7F7F7',
+                        gray: {
+                            100: '#F5F5F5',
+                            200: '#E0E0E0',
+                            300: '#BABABA',
+                            400: '#757575',
+                        }
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
@@ -27,6 +38,15 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-padding {
+                @apply py-20 md:py-28;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
             .nav-link {
                 @apply text-dark hover:text-primary transition-colors duration-300;
             }
@@ -40,118 +60,136 @@
     </style>
 </head>
 <body class="font-inter bg-white text-dark antialiased">
-
-<!-- 导航栏 -->
-<header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href=" " class="text-xl font-semibold tracking-tight">YUAN PENG · DESIGN</a >
-        
-        <nav class="hidden md:flex gap-8">
-            <a href="index.html" class="nav-link font-medium">首页</a >
-            <a href="portfolio.html" class="nav-link font-medium">作品集</a >
-            <a href="about.html" class="nav-link font-medium">关于我</a >
-            <a href="contact.html" class="nav-link font-medium">联系</a >
-        </nav>
-
-        <button class="md:hidden text-dark text-xl" id="menuBtn">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 px-6 py-4">
-        <div class="flex flex-col gap-4">
-            <a href="index.html" class="nav-link py-2">首页</a >
-            <a href="portfolio.html" class="nav-link py-2">作品集</a >
-            <a href="about.html" class="nav-link py-2">关于我</a >
-            <a href="contact.html" class="nav-link py-2">联系</a >
+    <!-- 导航栏 - 固定顶部 -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-semibold tracking-tight">YUAN PENG · DESIGN</a>
+            <!-- 桌面导航 -->
+            <nav class="hidden md:flex gap-8">
+                <a href="/" class="nav-link font-medium">首页</a>
+                <a href="/portfolio" class="nav-link font-medium">作品集</a>
+                <a href="/about" class="nav-link font-medium">关于我</a>
+                <a href="/contact" class="nav-link font-medium">联系</a>
+                <a href="/admin" class="text-primary font-medium">后台登录</a>
+            </nav>
+            <!-- 移动端菜单按钮 -->
+            <button class="md:hidden text-dark text-xl" id="menuBtn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-    </div>
-</header>
-
-<!-- 首页 - 全屏英雄区 -->
-<section class="h-screen flex items-center justify-center pt-20 px-6">
-    <div class="container mx-auto max-w-6xl">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6">
-                    袁鹏<br>电商设计师/美工<br>☎️:155 9927 6792
-                </h1>
-                <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-md">
-                    资深设计师 | 平面设计 | 品牌系统 | 三维渲染 | AIGC创意
-                </p >
-                <div class="flex flex-wrap gap-4">
-                    <a href="portfolio.html" class="btn-primary">查看作品集</a >
-                    <a href="contact.html" class="btn-outline">联系合作</a >
-                </div>
-            </div>
-            <div class="order-1 md:order-2 h-[50vh] md:h-[80vh] overflow-hidden">
-                < img src="https://picsum.photos/id/1005/1200/1800" alt="设计师主视觉" class="w-full h-full object-cover">
+        <!-- 移动端导航 -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 px-6 py-4">
+            <div class="flex flex-col gap-4">
+                <a href="/" class="nav-link py-2">首页</a>
+                <a href="/portfolio" class="nav-link py-2">作品集</a>
+                <a href="/about" class="nav-link py-2">关于我</a>
+                <a href="/contact" class="nav-link py-2">联系</a>
+                <a href="/admin" class="text-primary py-2 font-medium">后台登录</a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- 精选作品预览 -->
-<section class="py-20 bg-light px-6">
-    <div class="container mx-auto max-w-6xl">
-        <div class="mb-16 text-center">
-            <h2 class="text-3xl md:text-4xl font-semibold mb-4">精选作品</h2>
-            <p class="text-gray-400 max-w-xl mx-auto">一些作品展示</p >
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <a href="portfolio.html" class="group">
-                <div class="aspect-square overflow-hidden mb-4">
-                    < img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/DianDongYaShuaBD.jpg" alt="品牌视觉设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+    <!-- 首页 - 全屏英雄区 -->
+    <section class="h-screen flex items-center justify-center pt-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-6 text-balance">
+                        袁鹏<br>电商设计师/美工<br>☎️:155 9927 6792
+                    </h1>
+                    <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-md">
+                        资深设计师 | 平面设计 | 品牌系统 | 三维渲染 | AIGC创意
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/portfolio" class="btn-primary">查看作品集</a>
+                        <a href="/contact" class="btn-outline">联系合作</a>
+                    </div>
                 </div>
-                <h3 class="text-lg font-medium">品牌视觉系统</h3>
-                <p class="text-gray-400 text-sm">品牌 / 平面</p >
-            </a >
-
-            <a href="portfolio.html" class="group">
-                <div class="aspect-square overflow-hidden mb-4">
-                    < img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/ChargeXR.jpg" alt="三维渲染设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="order-1 md:order-2 h-[50vh] md:h-[80vh] overflow-hidden">
+                    <img src="https://picsum.photos/id/1005/1200/1800" alt="设计师主视觉" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-lg font-medium">三维空间渲染</h3>
-                <p class="text-gray-400 text-sm">三维 / 视觉</p >
-            </a >
-
-            <a href="portfolio.html" class="group">
-                <div class="aspect-square overflow-hidden mb-4">
-                    < img src="https://picsum.photos/id/1059/800/800" alt="AIGC创意设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <h3 class="text-lg font-medium">AIGC艺术创作</h3>
-                <p class="text-gray-400 text-sm">AIGC / 创意</p >
-            </a >
-        </div>
-
-        <div class="mt-12 text-center">
-            <a href="portfolio.html" class="btn-outline inline-block">查看全部作品</a >
-        </div>
-    </div>
-</section>
-
-<!-- 页脚 -->
-<footer class="py-12 px-6 border-t border-gray-200">
-    <div class="container mx-auto max-w-6xl">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0">
-                <p class="font-medium">YUAN PENG · DESIGN</p >
-                <p class="text-gray-400 text-sm mt-1">© 2025 All rights reserved.</p >
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+    <!-- 精选作品预览 -->
+    <section class="section-padding bg-light px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-4">精选作品</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">一些作品展示</p>
+            </div>
 
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 作品1 -->
+                <a href="/portfolio/brand-identity" class="group">
+                    <div class="aspect-square overflow-hidden mb-4">
+                        <img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/DianDongYaShuaBD.jpg" alt="品牌视觉设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg font-medium">品牌视觉系统</h3>
+                    <p class="text-gray-400 text-sm">品牌 / 平面</p>
+                </a>
+                <!-- 作品2 -->
+                <a href="/portfolio/3d-rendering" class="group">
+                    <div class="aspect-square overflow-hidden mb-4">
+                        <img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/ChargeXR.jpg" alt="三维渲染设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg font-medium">三维空间渲染</h3>
+                    <p class="text-gray-400 text-sm">三维 / 视觉</p>
+                </a>
+                <!-- 作品3 -->
+                <a href="/portfolio/aigc-creation" class="group">
+                    <div class="aspect-square overflow-hidden mb-4">
+                        <img src="https://picsum.photos/id/1059/800/800" alt="AIGC创意设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg font-medium">AIGC艺术创作</h3>
+                    <p class="text-gray-400 text-sm">AIGC / 创意</p>
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="/portfolio" class="btn-outline inline-block">查看全部作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-12 px-6 border-t border-gray-200">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="font-medium">LINSHEN · DESIGN</p>
+                    <p class="text-gray-400 text-sm mt-1">© 2025 All rights reserved.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Behance</a>
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Dribbble</a>
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Instagram</a>
+                    <a href="#" class="text-dark hover:text-primary transition-colors">小红书</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
