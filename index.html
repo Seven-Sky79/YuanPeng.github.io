@@ -63,14 +63,14 @@
     <!-- 导航栏 - 固定顶部 -->
     <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-xl font-semibold tracking-tight">YUAN PENG · DESIGN</a>
+            <a href=" " class="text-xl font-semibold tracking-tight">YUAN PENG · DESIGN</a >
             <!-- 桌面导航 -->
             <nav class="hidden md:flex gap-8">
-                <a href="/" class="nav-link font-medium">首页</a>
-                <a href="/portfolio" class="nav-link font-medium">作品集</a>
-                <a href="/about" class="nav-link font-medium">关于我</a>
-                <a href="/contact" class="nav-link font-medium">联系</a>
-                <a href="/admin" class="text-primary font-medium">后台登录</a>
+                <a href="/" class="nav-link font-medium">首页</a >
+                <a href="/portfolio" class="nav-link font-medium">作品集</a >
+                <a href="/about" class="nav-link font-medium">关于我</a >
+                <a href="/contact" class="nav-link font-medium">联系</a >
+                <a href="/admin" class="text-primary font-medium">后台登录</a >
             </nav>
             <!-- 移动端菜单按钮 -->
             <button class="md:hidden text-dark text-xl" id="menuBtn">
@@ -82,11 +82,11 @@
         <!-- 移动端导航 -->
         <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 px-6 py-4">
             <div class="flex flex-col gap-4">
-                <a href="/" class="nav-link py-2">首页</a>
-                <a href="/portfolio" class="nav-link py-2">作品集</a>
-                <a href="/about" class="nav-link py-2">关于我</a>
-                <a href="/contact" class="nav-link py-2">联系</a>
-                <a href="/admin" class="text-primary py-2 font-medium">后台登录</a>
+                <a href="/" class="nav-link py-2">首页</a >
+                <a href="/portfolio" class="nav-link py-2">作品集</a >
+                <a href="/about" class="nav-link py-2">关于我</a >
+                <a href="/contact" class="nav-link py-2">联系</a >
+                <a href="/admin" class="text-primary py-2 font-medium">后台登录</a >
             </div>
         </div>
     </header>
@@ -101,14 +101,15 @@
                     </h1>
                     <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-md">
                         资深设计师 | 平面设计 | 品牌系统 | 三维渲染 | AIGC创意
-                    </p>
+                    </p >
                     <div class="flex flex-wrap gap-4">
-                        <a href="/portfolio" class="btn-primary">查看作品集</a>
-                        <a href="/contact" class="btn-outline">联系合作</a>
+                        <a href="/portfolio" class="btn-primary">查看作品集</a >
+                        <a href="/contact" class="btn-outline">联系合作</a >
                     </div>
                 </div>
                 <div class="order-1 md:order-2 h-[50vh] md:h-[80vh] overflow-hidden">
-                    <img src="https://picsum.photos/id/1005/1200/1800" alt="设计师主视觉" class="w-full h-full object-cover">
+                    <!-- 修复：去掉 < img 中间的空格 -->
+                    < img src="https://picsum.photos/id/1005/1200/1800" alt="设计师主视觉" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -119,38 +120,41 @@
         <div class="container mx-auto max-w-6xl">
             <div class="mb-16 text-center">
                 <h2 class="text-3xl md:text-4xl font-semibold mb-4">精选作品</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">一些作品展示</p>
+                <p class="text-gray-400 max-w-xl mx-auto">一些作品展示</p >
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- 作品1 -->
                 <a href="/portfolio/brand-identity" class="group">
                     <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/DianDongYaShuaBD.jpg" alt="品牌视觉设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- 修复：去掉 < img 中间的空格 -->
+                        < img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/DianDongYaShuaBD.jpg" alt="品牌视觉设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-lg font-medium">品牌视觉系统</h3>
-                    <p class="text-gray-400 text-sm">品牌 / 平面</p>
-                </a>
+                    <p class="text-gray-400 text-sm">品牌 / 平面</p >
+                </a >
                 <!-- 作品2 -->
                 <a href="/portfolio/3d-rendering" class="group">
                     <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/ChargeXR.jpg" alt="三维渲染设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- 修复：去掉 < img 中间的空格 -->
+                        < img src="https://raw.githubusercontent.com/Seven-Sky79/YuanPeng.github.io/refs/heads/main/ChargeXR.jpg" alt="三维渲染设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-lg font-medium">三维空间渲染</h3>
-                    <p class="text-gray-400 text-sm">三维 / 视觉</p>
-                </a>
+                    <p class="text-gray-400 text-sm">三维 / 视觉</p >
+                </a >
                 <!-- 作品3 -->
                 <a href="/portfolio/aigc-creation" class="group">
                     <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://picsum.photos/id/1059/800/800" alt="AIGC创意设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <!-- 修复：去掉 < img 中间的空格 -->
+                        < img src="https://picsum.photos/id/1059/800/800" alt="AIGC创意设计" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h3 class="text-lg font-medium">AIGC艺术创作</h3>
-                    <p class="text-gray-400 text-sm">AIGC / 创意</p>
-                </a>
+                    <p class="text-gray-400 text-sm">AIGC / 创意</p >
+                </a >
             </div>
 
             <div class="mt-12 text-center">
-                <a href="/portfolio" class="btn-outline inline-block">查看全部作品</a>
+                <a href="/portfolio" class="btn-outline inline-block">查看全部作品</a >
             </div>
         </div>
     </section>
@@ -160,14 +164,14 @@
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <p class="font-medium">LINSHEN · DESIGN</p>
-                    <p class="text-gray-400 text-sm mt-1">© 2025 All rights reserved.</p>
+                    <p class="font-medium">LINSHEN · DESIGN</p >
+                    <p class="text-gray-400 text-sm mt-1">© 2025 All rights reserved.</p >
                 </div>
                 <div class="flex gap-6">
-                    <a href="#" class="text-dark hover:text-primary transition-colors">Behance</a>
-                    <a href="#" class="text-dark hover:text-primary transition-colors">Dribbble</a>
-                    <a href="#" class="text-dark hover:text-primary transition-colors">Instagram</a>
-                    <a href="#" class="text-dark hover:text-primary transition-colors">小红书</a>
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Behance</a >
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Dribbble</a >
+                    <a href="#" class="text-dark hover:text-primary transition-colors">Instagram</a >
+                    <a href="#" class="text-dark hover:text-primary transition-colors">小红书</a >
                 </div>
             </div>
         </div>
