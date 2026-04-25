@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系 - 袁鹏的设计</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black">
+    <nav class="fixed w-full top-0 left-0 p-5 flex justify-between items-center bg-white shadow-sm z-50">
+        <a href=" " class="font-bold text-xl">YUAN PENG</a >
+        <div class="flex gap-5">
+            <a href="index.html">首页</a >
+            <a href="portfolio.html">作品集</a >
+            <a href="about.html">关于我</a >
+            <a href="contact.html">联系</a >
+        </div>
+    </nav>
+
+    <main class="pt-28 px-5 md:px-20 max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8">联系我</h1>
+        <p class="text-lg mb-4">电话：155 9927 6792</p >
+        <p class="text-lg mb-4">邮箱：2534917542@qq.com</p >
+        <p class="text-lg mb-4">微信：qqqqwx79k</p >
+        <p class="text-lg">工作范围：品牌设计、VI设计、平面设计、视觉创意</p >
+    </main>
+</body>
+</html>
