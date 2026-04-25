@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 视觉设计师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
 
+        /* 时间线核心样式 - 与首页风格统一 */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 28px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #f87171;
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 60px;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: scale(0.92);
+            opacity: 0.6;
+            filter: brightness(0.9);
+        }
+        .timeline-item.active {
+            transform: scale(1);
+            opacity: 1;
+            filter: brightness(1);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 14px;
+            top: 24px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ef4444;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.1);
+            z-index: 2;
+        }
+
+        /* 卡片样式 - 统一风格 */
+        .timeline-card {
+            background: #fff1f1;
+            padding: 28px 32px;
+            border-radius: 16px;
+            border-left: 4px solid #ef4444;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.05);
+        }
+        .timeline-item.active .timeline-card {
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.12);
+        }
+
+        /* 导航栏 - 完全统一 */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 18px 40px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 99;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #dc2626;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+        }
+        .nav-menu a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #ef4444;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 导航栏（与index.html完全统一） -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">YUAN PENG</div>
+        <div class="nav-menu">
+            <a href=" ">首页</a >
+            <a href="about.html" class="active">关于我</a >
+            <a href="portfolio.html">作品集</a >
+            <a href="contact.html">联系我</a >
+        </div>
+    </div>
+</nav>
+
+<!-- 页面主体 -->
+<main class="pt-28 pb-20 px-4 md:px-6">
+    <!-- 页面标题 -->
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-red-600 mb-4">工作经历</h1>
+        <p class="text-gray-600 text-lg">视觉设计 | 电商设计 | 产品渲染 | 品牌运营 | AIGC应用</p >
+    </div>
+
+    <!-- 竖向时间线（倒序排列） -->
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- 1. 2026 职业技能提升（最新） -->
+        <div class="timeline-item active">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-bold text-red-600 mb-2">2026.1 - 2026.3</h3>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">职业技能专项提升期</h4>
+                <ul class="text-gray-700 space-y-2 mb-4">
+                    <li>• 设计能力复盘与强化：系统回顾并巩固电商设计、产品视觉、视频剪辑等核心技能，梳理过往项目经验，形成标准化的设计流程与素材管理方法。</li>
+                    <li>• AIGC 设计工具学习与应用：学习 AI 绘画、AI 视频生成等 AIGC 工具，探索其在电商视觉、产品渲染、营销素材等场景的应用，拓展设计效率与创意表达边界。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. 2023-2025 自主创业 -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-bold text-red-600 mb-2">2023.12 - 2025.12</h3>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">自主创业（茶饮店 / 无人棋牌室 / 水果零售项目）</h4>
+                <ul class="text-gray-700 space-y-2 mb-4">
+                    <li>• 全链路商业运营管理：合作负责多项目的筹备与日常运营，涵盖门店选址、成本管控、供应链管理、人员排班及客户服务全流程，积累了从 0 到 1 的商业落地与精细化运营经验。</li>
+                    <li>• 品牌视觉与营销推广：主导门店品牌视觉搭建，包括 logo 设计、菜单海报、门店物料及线上宣传素材制作；结合节日节点策划营销活动，通过视觉内容优化与线上线下联动推广，有效提升门店客流与复购率。</li>
+                    <li>• 用户运营与数据分析：根据用户需求与经营数据，持续优化产品结构、服务流程与营销策略，提升用户满意度与项目整体盈利水平。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. 2023 帕帕尼宠物用品 -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-bold text-red-600 mb-2">2023.1 - 2023.10</h3>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">深圳市帕帕尼宠物用品有限公司 | 运营部-设计</h4>
+                <ul class="text-gray-700 space-y-2 mb-4">
+                    <li>• 商品转化型视觉优化：主导商品主图、详情页及营销海报的视觉设计与迭代，通过优化画面吸引力与信息传达效率提升点击率；结合用户反馈与数据表现持续优化素材，助力提升商品转化率与销售表现。</li>
+                    <li>• 全场景产品视觉更新维护：根据新品上线、营销活动及季节推广需求，高效完成产品拍摄、精修与视觉优化；确保图片质感、风格统一，适配多平台展示规范，保障页面视觉的新鲜感与专业性。</li>
+                    <li>• 独立产品拍摄与布光执行：独立完成产品拍摄全流程，包含布光设计、场景搭建与拍摄执行，输出高质量、适配不同平台需求的产品原图素材。</li>
+                    <li>• 产品 3D 建模、渲染与视频制作：独立完成产品 3D 建模、渲染输出及后期视频剪辑工作，打造立体、直观的产品展示效果，丰富品牌多维度视觉呈现。</li>
+                    <li>• 独立站视觉搭建与运营支持：参与独立站整体视觉风格设计与页面搭建，保障品牌调性统一与用户体验流畅；负责网站日常视觉更新、商品上新及专题页设计，持续优化网站视觉呈现与品牌形象。</li>
+                </ul>
+                <div class="text-red-500 font-medium text-sm">掌握技能：拍摄、PS/AI、C4D、Kyshot、剪映</div>
+            </div>
+        </div>
+
+        <!-- 4. 2022 弘安信息管理 -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-bold text-red-600 mb-2">2022.1 - 2023.1</h3>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">深圳市弘安信息管理有限公司（实习） | 设计部-美工</h4>
+                <ul class="text-gray-700 space-y-2 mb-4">
+                    <li>• 产品视觉呈现：负责产品图片精修与套图标准化处理，确保画面细节清晰、风格统一，支撑产品展示需求</li>
+                    <li>• 运营素材支持：协助运营团队制作转化导向的素材图，通过视觉优化助力运营场景转化效率</li>
+                    <li>• 品牌视觉协同：配合完成logo设计的辅助工作，参与创意构思与细节调整环节</li>
+                    <li>• 商务文档视觉输出：配合完成分公司招商PPT及总公司介绍PPT的视觉设计</li>
+                </ul>
+                <div class="text-red-500 font-medium text-sm">掌握技能：PS/AI、大型家具家居产品融合、PPT设计</div>
+            </div>
+        </div>
+
+        <!-- 5. 2021 知予科技 -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <h3 class="text-xl font-bold text-red-600 mb-2">2021.7 - 2021.12</h3>
+                <h4 class="text-lg font-semibold text-gray-800 mb-4">深圳市知予科技有限公司（实习） | 设计部-美工</h4>
+                <ul class="text-gray-700 space-y-2 mb-4">
+                    <li>• 客户定制化拍摄执行：对接客户定制化拍摄需求，独立完成灯光场景搭建、布光布置与产品拍摄，为后续视觉输出提供高质量原始素材。</li>
+                    <li>• 产品视觉优化设计：负责产品原图筛选、后期精修与创意设计，优化画面质感与细节呈现，精准突出产品核心卖点，提升视觉吸引力。</li>
+                    <li>• 项目全流程协同交付：在设计全流程中与项目相关方保持高效沟通，把控项目进度与质量，确保作品按时保质交付。</li>
+                    <li>• 跨境平台视觉物料制作：根据亚马逊平台规范与客户需求，独立完成产品主图精修、A + 页面设计及 Banner 海报设计，打造适配平台风格的转化型视觉素材。</li>
+                </ul>
+                <div class="text-red-500 font-medium text-sm">掌握技能：产品拍摄、布光设计、PS/AI、亚马逊平台视觉规范</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    const items = document.querySelectorAll('.timeline-item');
+    let current = 0;
+
+    // 激活当前项
+    function activate(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+        // 滚动到居中
+        items[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        current = index;
+    }
+
+    // 初始激活第一项
+    activate(0);
+
+    // 点击切换
+    items.forEach((item, idx) => {
+        item.addEventListener('click', () => activate(idx));
+    });
+
+    // 滚轮切换
+    let isScroll = false;
+    window.addEventListener('wheel', (e) => {
+        if (isScroll) return;
+        isScroll = true;
+        const dir = e.deltaY > 0 ? 1 : -1;
+        const next = current + dir;
+        if (next >= 0 && next < items.length) activate(next);
+        setTimeout(() => isScroll = false, 300);
+    }, { passive: false });
+</script>
+</body>
+</html>
