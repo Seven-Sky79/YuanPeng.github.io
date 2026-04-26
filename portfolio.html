@@ -21,193 +21,60 @@
     <h1 class="text-4xl font-bold mb-3">我的作品集</h1>
     <p class="text-gray-600 mb-10">产品渲染 / 电商设计 / 视觉创意</p >
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-        <!-- 1 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="1.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">1</h3>
+        <!-- ====================== 产品 1（7张图） ====================== -->
+        <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all p-3">
+            <!-- 主图 -->
+            < img id="prod1" src="1.jpg" class="w-full h-56 object-cover rounded-lg mb-2">
+            <!-- 7张缩略图 -->
+            <div class="flex gap-1.5 overflow-x-auto pb-1">
+                < img src="1.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="2.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="3.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="4.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="5.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="6.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="7.jpg" onclick="document.getElementById('prod1').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+            </div>
+            <div class="p-2">
+                <h3 class="font-bold">产品 1</h3>
                 <p class="text-sm text-gray-500">产品渲染</p >
             </div>
         </div>
 
-        <!-- 2 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="2.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">2</h3>
+        <!-- ====================== 产品 2（7张图） ====================== -->
+        <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all p-3">
+            < img id="prod2" src="8.jpg" class="w-full h-56 object-cover rounded-lg mb-2">
+            <div class="flex gap-1.5 overflow-x-auto pb-1">
+                < img src="8.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="9.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="10.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="11.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="12.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="13.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="14.jpg" onclick="document.getElementById('prod2').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+            </div>
+            <div class="p-2">
+                <h3 class="font-bold">产品 2</h3>
                 <p class="text-sm text-gray-500">产品渲染</p >
             </div>
         </div>
 
-        <!-- 3 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="3.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">3</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
+        <!-- ====================== 产品 3（7张图） ====================== -->
+        <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all p-3">
+            < img id="prod3" src="15.jpg" class="w-full h-56 object-cover rounded-lg mb-2">
+            <div class="flex gap-1.5 overflow-x-auto pb-1">
+                < img src="15.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="16.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="17.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="18.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="19.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="20.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
+                < img src="21.jpg" onclick="document.getElementById('prod3').src=this.src" class="w-10 h-10 rounded border cursor-pointer">
             </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="4.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">4</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="5.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">5</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="6.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">6</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 7 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="7.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">7</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="8.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">8</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 9 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="9.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">9</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 10 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="10.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">10</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 11 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="11.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">11</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 12 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="12.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">12</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 13 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="13.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">13</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 14 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="14.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">14</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 15 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="15.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">15</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 16 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="16.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">16</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 17 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="17.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">17</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 18 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="18.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">18</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 19 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="19.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">19</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 20 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="20.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">20</h3>
-                <p class="text-sm text-gray-500">产品渲染</p >
-            </div>
-        </div>
-
-        <!-- 21 -->
-        <div class="group rounded-lg overflow-hidden shadow hover:shadow-lg transition-all">
-            < img src="21.jpg" class="w-full h-56 object-cover group-hover:scale-105 duration-300">
-            <div class="p-3">
-                <h3 class="font-bold">21</h3>
+            <div class="p-2">
+                <h3 class="font-bold">产品 3</h3>
                 <p class="text-sm text-gray-500">产品渲染</p >
             </div>
         </div>
